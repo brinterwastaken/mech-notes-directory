@@ -1,0 +1,7 @@
+---
+title: "CI114TA/CI124TA"
+subtitle: "AI Foundations for Engineers"
+---
+
+## Units
+1. [Introduction to AI](unit-1.qmd)

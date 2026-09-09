@@ -13,6 +13,7 @@ website:
       - text: "Courses"
         menu:
           - PY211IB/index.qmd
+          - CI114TA-CI124TA/index.qmd
           - MA211TB/index.qmd
     tools:
       - icon: github

@@ -1,0 +1,21 @@
+---
+title: "Introduction to AI"
+---
+
+Artificial Intelligence (AI) combines computer science, engineering, and data-driven analysis to build systems capable of simulating intelligent human behavior.
+
+# What is AI?
+
+## Russell & Norvig Definition
+
+> AI is an inter-disciplinary scientific and engineering field dedicated to building agents that can perceive their environment through various sensors, extract relevant information, learn from experience, reason about actions and make decisions that help them to achieve specific goals or maximize their performance across a range of complex and dynamic environments.
+
+## Key Milestones in AI History
+
+* **1950**: Alan Turing published *"Computing Machinery and Intelligence"*, introducing the Turing Test to evaluate a machine's ability to exhibit intelligent behavior.
+* **1956**: The term "Artificial Intelligence" was first coined at the Dartmouth Summer Research Project on Artificial Intelligence, organized by John McCarthy (known as the "Father of AI").
+* **1966**: Creation of ELIZA, the first chatbot designed to simulate a conversation with a psychotherapist.
+* **1997**: IBM's Deep Blue defeated world chess champion Garry Kasparov.
+* **2011**: Apple introduced Siri, and IBM's Watson won the quiz show *Jeopardy!*.
+* **2014**: Amazon introduced Alexa.
+* **2016**: Google DeepMind's AlphaGo defeated human champion Go player Lee Sedol.
