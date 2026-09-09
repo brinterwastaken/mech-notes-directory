@@ -1,3 +1,56 @@
 ---
 title: "Oscillations"
 ---
+
+# Introduction to Oscillatory Motion
+- Motion in a which a body displaces to and fro about a mean position, repeatedly.
+
+## Important Terms
+1. *Mean position*: The position of the body at the instant of time when the motion is at equilibrium.
+2. *Amplitude (A)*: The largest displacement of the body from the mean position.
+3. *Frequency ($\nu$)*: The number of oscillations per unit of time.
+4. *Time Period (T)*: The time taken for one complete oscillation.
+5. *Angular Frequency ($\omega$)*: The angular speed of the phasor representing the oscillation.
+
+## Types
+- Free Oscillations, Damped Oscillations, and Forced Oscillations.
+
+# Simple Harmonic Motion (SHM)
+
+- Oscillatory motion in which the acceleration of the body ($a$) is proportional to the negative of its displacement ($x$) from its mean position.
+
+i.e.
+$$
+a \propto -x
+$$
+
+- Note: For angular SHM, the expression is instead written as $\alpha \propto -\theta$ where $\alpha$ is the angular acceleration and $\theta$ is the angular displacement.
+
+## Spring-Mass System
+
+- This is an example of linear SHM.
+
+- The force on the mass is proportional to the negative of the displacement from the equilibrium position, according to Hooke's Law.
+
+$$ F \propto -x \implies F = -kx $$
+
+- $k$ is known as the spring constant of the spring.
+
+Learn more at: [LibreTexts Physics: The motion of a spring-mass system](https://phys.libretexts.org/Courses/Berea_College/Introductory_Physics%3A_Berea_College/13%3A_Simple_Harmonic_Motion/13.01%3A_The_motion_of_a_spring-mass_system)
+
+## Torsional Pendulum
+
+- This is an example of angular SHM.
+
+- The pendulum consists of a disc having some mass, suspended by a torsion wire (usually made of spring steel) from a rigid support.
+
+- Here, the restoring force is caused by the torsional strain on the pendulum rod when the disc is rotated from its mean position.
+
+$$ \tau \propto -\theta  \implies \tau = -k \theta $$
+
+> The above equation is essentially a torsional equivalent to Hooke's law.
+
+- $k$ is known as the torsional constant of the wire.
+
+
+

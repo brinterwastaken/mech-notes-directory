@@ -4,7 +4,7 @@ title: "Elementary Linear Algebra"
 
 - Elementary linear algebra is the study of lines, planes, and multidimensional spaces using vectors and matrices.
 
-- To understand the concepts of this unit, it is important to have a basic understanding of matrices and determinants.
+- To understand the concepts of this unit, it is important to have a basic understanding of matrices (types of matrices, matrix operations, etc.) and determinants.
 
 # Submatrices and Minors
 

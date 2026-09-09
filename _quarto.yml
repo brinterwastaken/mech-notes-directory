@@ -4,7 +4,7 @@ project:
     watch-inputs: true
 
 website:
-  title: "Mechanical Notes Directory"
+  title: "MND ⚙️"
   navbar:
     left:
       - href: index.qmd
@@ -12,6 +12,7 @@ website:
       - about.qmd
       - text: "Courses"
         menu:
+          - PY211IB/index.qmd
           - MA211TB/index.qmd
     tools:
       - icon: github
@@ -26,6 +27,3 @@ format:
       - litera
     css: styles.css
     toc: true
-
-
-
