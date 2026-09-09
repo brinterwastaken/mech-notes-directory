@@ -1,0 +1,31 @@
+project:
+  type: website
+  preview:
+    watch-inputs: true
+
+website:
+  title: "Mechanical Notes Directory"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+      - text: "Courses"
+        menu:
+          - MA211TB/index.qmd
+    tools:
+      - icon: github
+        href: https://github.com/brinterwastaken/mech-notes-directory
+
+  sidebar:
+    contents: auto
+
+format:
+  html:
+    theme:
+      - litera
+    css: styles.css
+    toc: true
+
+
+

@@ -1,0 +1,9 @@
+/* css styles */
+main li:not(.breadcrumb-item) {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.navbar {
+  background-color: #ffffff67;
+  backdrop-filter: blur(2rem);
+}

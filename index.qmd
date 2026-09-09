@@ -1,0 +1,9 @@
+---
+title: "Mechanical Engineering Notes Directory"
+---
+
+- A collection of notes of various courses under the Mechanical Engineering Stream.
+
+# Courses
+- [PY211IB:  *Classical Physics for Engineers*](PY211IB/)
+- [MA211TB:  *Fundamentals of Linear Algebra, Calculus, and Differential Equations*](MA211TB/)
