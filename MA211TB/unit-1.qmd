@@ -170,11 +170,11 @@ $C = \begin{bmatrix} 3 & 0 & 0 & 4 & 5 \\ 0 & 1 & 2 & 3 & 4 \\ 0 & 0 & 0 & 0 & 0
 
 - Here, $C$ is not in Echelon form.
 
-  If we apply $R_4 \implies R_4 - 2R_2$, we get:
+  If we apply $R_4 \rightarrow R_4 - 2R_2$, we get:
 
   $\begin{bmatrix} 3 & 0 & 0 & 4 & 5 \\ 0 & 1 & 2 & 3 & 4 \\ 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 \end{bmatrix} \implies \rho(C) = 2$
 
-- Similarly, $\begin{bmatrix} 1 & 2 & 4 \\ 2 & 4 & 6 \\ 0 & 0 & 0 \end{bmatrix}$ can be reduced to $\begin{bmatrix} 1 & 2 & 4 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{bmatrix}$ (using $R_2 \implies R_2 - 2R_1$)
+- Similarly, $\begin{bmatrix} 1 & 2 & 4 \\ 2 & 4 & 6 \\ 0 & 0 & 0 \end{bmatrix}$ can be reduced to $\begin{bmatrix} 1 & 2 & 4 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{bmatrix}$ (using $R_2 \rightarrow R_2 - 2R_1$)
 Thus, the rank is $1$.
 
 ## Finding the rank of a matrix by conversion to Echelon form
