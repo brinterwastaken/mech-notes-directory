@@ -6,5 +6,5 @@ title: "Mechanical Engineering Notes Directory"
 
 # Courses
 - [PY211IB: *Classical Physics for Engineers*](PY211IB/)
-- [CI114TA/CI124TA: *AI Foundations for Engineers*](CI114TA-CI124TA/)
+- [CI114TA: *AI Foundations for Engineers*](CI114TA/)
 - [MA211TB: *Fundamentals of Linear Algebra, Calculus, and Differential Equations*](MA211TB/)

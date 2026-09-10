@@ -1,5 +1,5 @@
 ---
-title: "CI114TA/CI124TA"
+title: "CI114TA"
 subtitle: "AI Foundations for Engineers"
 ---
 
