@@ -19,22 +19,102 @@ title: "Oscillations"
 
 - Oscillatory motion in which the acceleration of the body ($a$) is proportional to the negative of its displacement ($x$) from its mean position.
 
-i.e.
 $$
-a \propto -x
+\text{i.e. } a \propto -x
 $$
 
-- Note: For angular SHM, the expression is instead written as $\alpha \propto -\theta$ where $\alpha$ is the angular acceleration and $\theta$ is the angular displacement.
+::: {.callout-note}
 
-## Spring-Mass System
+For angular SHM, the expression is instead written as:
+$$
+\alpha \propto -\theta
+$$
+Where $\alpha$ is the angular acceleration and $\theta$ is the angular displacement.
+
+:::
+
+The above equation can be rewritten as (by introducing a constant $\omega^2$):
+
+$$
+\frac{d^2x}{dt^2} \propto -x \implies \boxed{\frac{d^2x}{dt^2} + \omega^2x = 0}
+$$ {#eq-shm-de}
+
+The solution of this differential equation is given by a sinusoidal function of the form:
+
+$$
+\boxed{x(t) = A\sin(\omega t + \phi)}
+$$
+Where, $A$ is the amplitude, $\omega$ is the angular frequency, and $\phi$ is the starting phase angle.
+
+From the value of $\omega$, we can find the time period of the oscillations as $T = \frac{2\pi}{\omega}$.
+
+## Spring-Block System
+
+![Spring Block System](images/spring-block.svg){width=8cm #fig-spring-block-system}
 
 - This is an example of linear SHM.
 
 - The force on the mass is proportional to the negative of the displacement from the equilibrium position, according to Hooke's Law.
 
-$$ F \propto -x \implies F = -kx $$
+$$ 
+F \propto -x \implies \boxed{F = -kx}
+$$ {#eq-spring-force}
 
 - $k$ is known as the spring constant of the spring.
+
+The above equation can be rewritten as:
+
+$$
+ma = kx \implies \frac{d^2x}{dt^2} + \frac{k}{m}x = 0
+$$
+
+Comparing this with @eq-shm-de, we get:
+
+$$
+\boxed{\omega = \sqrt{\frac{k}{m}} \text{ and } T = 2\pi \sqrt{\frac{m}{k}}}
+$$
+
+### Combination of Springs
+
+#### Series Combination
+
+![Series Combination](images/spring-series.svg){width=8cm #fig-spring-block-system}
+
+The total extension of the springs is equal to the sum of the extensions of the individual springs. i.e., $x = x_1 + x_2 + \dots$
+
+From @eq-spring-force, we get $x = \frac{-F}{k}$. Thus,
+
+$$
+\frac{-F}{k} = \frac{-F_1}{k_1} + \frac{-F_2}{k_2} + \dots
+$$
+
+Since the force is identical for all springs, we can divide the above equation by $-F \, (= -F_1 = -F_2 = \dots)$ to get:
+
+$$\boxed{
+\frac{1}{k_{\text{eff}}} = \frac{1}{k_1} + \frac{1}{k_2} + \dots}
+$$ {#eq-spring-series}
+
+Where $k_{\text{eff}}$ is the effective spring constant.
+
+#### Parallel Combination
+
+![Parallel Combination](images/spring-parallel.svg){width=8cm #fig-spring-block-system}
+
+The total restoring force is equal to the sum of the forces exerted by the individual springs. i.e., $F = F_1 + F_2 + \dots$
+
+From @eq-spring-force, we get $F = k_1 x_1 + k_2 x_2 + \dots$. Thus,
+
+$$
+k x = k_1 x_1 + k_2 x_2 + \dots
+$$
+
+Since the extension of all springs is equal to the displacement of the mass, we can divide the above equation by $x \, (= x_1 = x_2 = \dots)$ to get:
+
+$$\boxed{
+k_{\text{eff}} = k_1 + k_2 + \dots}
+$$ {#eq-spring-parallel}
+
+Where $k_{\text{eff}}$ is the effective spring constant.  
 
 Learn more at: [LibreTexts Physics: The motion of a spring-mass system](https://phys.libretexts.org/Courses/Berea_College/Introductory_Physics%3A_Berea_College/13%3A_Simple_Harmonic_Motion/13.01%3A_The_motion_of_a_spring-mass_system)
 
