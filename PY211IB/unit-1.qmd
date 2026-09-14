@@ -179,7 +179,7 @@ $$
 - Thus, we introduce a proportionality constant $c$ called the damping coefficient, which gives us the equation:
 
 $$
-F_d = -r v \implies F_d = - c \frac{dx}{dt}
+F_d = -c v \implies F_d = - c \frac{dx}{dt}
 $$
 
 ## Equation of Damped Simple Harmonic Motion
