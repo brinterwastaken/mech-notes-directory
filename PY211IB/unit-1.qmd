@@ -238,11 +238,13 @@ $$ {#eq-damped-soln}
 
 Where $A_1$ and $A_2$ are arbitrary constants.^[We introduce the constants $A_1$ and $A_2$ because of the Principle of Superposition. A second-order differential equation must have two independent solutions ($e^{\lambda _1t}$ and $e^{\lambda _2t}$). Combining them with these constants gives the total general solution. The exact values of $A_1$ and $A_2$ are physical scalers that will be locked into place later based on the system's initial conditions (its starting position and starting velocity at $t=0$)]
 
-## Scenarios of Damping
+## Types of Damping
 
-![Scenarios of Damping](_images/damping-types.svg){width=12cm #fig-damping-types}
+![Types of Damping](_images/damping-types.svg){width=12cm #fig-damping-types}
 
 ### Overdamping ($b^2 > \omega^2$)
+
+(also known as *Heavy Damping*)
 
 - The term $\sqrt{b^2 - w^2}$ is real, and smaller $b$. Thus, $\lambda _1$ as well as $\lambda _2$ are real and negative.
 
@@ -254,7 +256,7 @@ Where $A_1$ and $A_2$ are arbitrary constants.^[We introduce the constants $A_1$
 
 **Examples:** Pendulum moving in viscous oil, Deadbeat moving coil galvanometer, etc.
 
-### Critically Damped ($b^2 = \omega^2$)
+### Critical Damping ($b^2 = \omega^2$)
 
 - In this case, we use limit analysis to find the solution as $b^2 - w^2 \to 0$.
 
@@ -298,7 +300,7 @@ $$
 Critical damping sits at the *sweet spot* of damping of the system. Any less damping ($b < \omega$) and the system starts to oscillate and bounce. Any more damping ($b > \omega$) and the excessive drag forces a sluggish, creeping exponential tail. Therefore, $b = \omega$ is mathematically the exact threshold that prevents oscillations while ensuring quick decay.
 :::
 
-### Underdamped ($b^2 < \omega^2$)
+### Underdamping ($b^2 < \omega^2$)
 
 ::: {.callout-note}
 🚧 This section is under construction. 🚧 
