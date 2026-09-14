@@ -1,6 +1,9 @@
 ---
 title: "Oscillations"
+subtitle: "<a href='javascript:void(0)' onclick='window.print()' class='btn btn-outline-primary btn-sm' role='button'>Download/Print</a>"
+format: html
 ---
+
 
 # Introduction to Oscillatory Motion
 Motion in a which a body repeatedly displaces to and fro about a mean position.
@@ -202,7 +205,7 @@ The above equation uses Newton's notation of derivatives, where the number of do
 
 - We use the *characteristic equation method* to solve this second-order differential equation.
 
-The characteristic equation is found by considering $x = e^{\lambda t}$, and differentiating x according to the differential equation i.e., $\dot{x} = \lambda x$ and $\ddot{x} = \lambda^2 x$. (Where $\lambda$ is an arbitrary constant.)
+The characteristic equation is found by considering $x = e^{\lambda t}$, and differentiating x according to the differential equation; i.e., $\dot{x} = \lambda x$ and $\ddot{x} = \lambda^2 x$. (Where $\lambda$ is an arbitrary constant.)
 
 Putting the value of $\ddot{x}$ and $\dot{x}$ in @eq-damped-de, and dividing by $x$, we get the characteristic equation:
 

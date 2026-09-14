@@ -16,6 +16,11 @@ header:not(.headroom--frozen) .quarto-secondary-nav {
   transition: background-color 0.25s ease;
 }
 
+.resp-fig {
+  float: right;
+  margin-left: 0.5rem;
+}
+
 @media (max-width: 48rem) {
   .resp-fig {
     width: 100%;
@@ -29,4 +34,27 @@ header:not(.headroom--frozen) .quarto-secondary-nav {
   overflow-x: auto;
   overflow-y: hidden;
   max-width: 100%;
+}
+
+/* print styles */
+@media print {
+  #quarto-margin-sidebar {
+    display: none;
+  }
+  #quarto-content {
+    grid-template-columns: auto;
+    margin: 1rem;
+  }
+  #quarto-header {
+    display: none;
+  }
+  #title-block-header h1 {
+    font-size: calc(2rem + 0.9vw)
+  }
+  nav.quarto-page-breadcrumbs {
+    display: block !important;
+  }
+  #title-block-header .subtitle {
+    display: none;
+  }
 }

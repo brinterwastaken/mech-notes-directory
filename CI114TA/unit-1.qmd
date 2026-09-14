@@ -1,5 +1,7 @@
 ---
 title: "Introduction to AI"
+subtitle: "<a href='javascript:void(0)' onclick='window.print()' class='btn btn-outline-primary btn-sm' role='button'>Download/Print</a>"
+format: html
 ---
 
 Artificial Intelligence (AI) combines computer science, engineering, and data-driven analysis to build systems capable of simulating intelligent human behavior.

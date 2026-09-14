@@ -1,5 +1,7 @@
 ---
 title: "Elementary Linear Algebra"
+subtitle: "<a href='javascript:void(0)' onclick='window.print()' class='btn btn-outline-primary btn-sm' role='button'>Download/Print</a>"
+format: html
 ---
 
 - Elementary linear algebra is the study of lines, planes, and multidimensional spaces using vectors and matrices.
