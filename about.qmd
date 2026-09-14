@@ -5,3 +5,5 @@ title: "About"
 - Created by students of RVCE, Bengaluru
 - Website made with [Quarto](https://quarto.org/docs/websites/)
 - Contribute on Github: [brinterwastaken/mech-notes-directory](https://github.com/brinterwastaken/mech-notes-directory)
+
+Contact [trinethr_n@yahoo.com](mailto:trinethr_n@yahoo.com) (Trinethr N) to learn more and/or contribute to the website.

@@ -6,9 +6,14 @@ main li:not(.breadcrumb-item) {
   font-family: "Gelasio", serif;
 }
 
-.navbar, .quarto-secondary-nav {
-  background-color: #ffffff48;
-  backdrop-filter: blur(2rem);
+#quarto-header {
+  backdrop-filter: blur(1rem);
+}
+
+header:not(.headroom--frozen) .navbar,
+header:not(.headroom--frozen) .quarto-secondary-nav {
+  background-color: #ffffff5f;
+  transition: background-color 0.25s ease;
 }
 
 @media (max-width: 48rem) {

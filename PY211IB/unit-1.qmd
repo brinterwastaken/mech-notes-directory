@@ -239,6 +239,10 @@ Where $A_1$ and $A_2$ are arbitrary constants.^[We introduce the constants $A_1$
 
 ![Scenarios of Damping](_images/damping-types.svg){width=12cm #fig-damping-types}
 
+::: {.callout-note}
+🚧 This section is under construction. 🚧 
+:::
+
 ### Overdamping ($b^2 > \omega^2$)
 
 ### Critically Damped ($b^2 = \omega^2$)
