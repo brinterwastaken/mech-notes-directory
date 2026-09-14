@@ -1,9 +1,27 @@
 /* css styles */
+@import url("https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&display=swap");
+
+p,
 main li:not(.breadcrumb-item) {
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: "Gelasio", serif;
 }
 
-.navbar {
-  background-color: #ffffff67;
+.navbar, .quarto-secondary-nav {
+  background-color: #ffffff48;
   backdrop-filter: blur(2rem);
+}
+
+@media (max-width: 48rem) {
+  .resp-fig {
+    width: 100%;
+    height: auto;
+    padding-inline: 1rem;
+  }
+}
+
+.math.display {
+  display: block;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
 }

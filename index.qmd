@@ -1,5 +1,6 @@
 ---
 title: "Mechanical Engineering Notes Directory"
+number-sections: false
 ---
 
 - A collection of notes of various courses under the Mechanical Engineering Stream.

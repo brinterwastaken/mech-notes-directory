@@ -1,6 +1,7 @@
 ---
 title: "MA211TB"
 subtitle: "Fundamentals of Linear Algebra, Calculus, and Differential Equations"
+number-sections: false
 ---
 
 ## Units

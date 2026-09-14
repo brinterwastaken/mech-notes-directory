@@ -1,6 +1,7 @@
 ---
 title: "CI114TA"
 subtitle: "AI Foundations for Engineers"
+number-sections: false
 ---
 
 ## Units

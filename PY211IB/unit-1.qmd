@@ -3,17 +3,19 @@ title: "Oscillations"
 ---
 
 # Introduction to Oscillatory Motion
-- Motion in a which a body displaces to and fro about a mean position, repeatedly.
+Motion in a which a body repeatedly displaces to and fro about a mean position.
 
 ## Important Terms
-1. *Mean position*: The position of the body at the instant of time when the motion is at equilibrium.
-2. *Amplitude (A)*: The largest displacement of the body from the mean position.
-3. *Frequency ($\nu$)*: The number of oscillations per unit of time.
-4. *Time Period (T)*: The time taken for one complete oscillation.
-5. *Angular Frequency ($\omega$)*: The angular speed of the phasor representing the oscillation.
+1. **Mean position**: The position of the body at the instant of time when the motion is at equilibrium.
+2. **Amplitude ($A$)**: The largest displacement of the body from the mean position.
+3. **Frequency ($\nu$)**: The number of oscillations per unit of time.
+4. **Time Period ($T$)**: The time taken for one complete oscillation.
+5. **Angular Frequency ($\omega$)**: The angular speed of the phasor representing the oscillation.
 
 ## Types
-- Free Oscillations, Damped Oscillations, and Forced Oscillations.
+1. **Free Oscillations**: Oscillations that occur at a system's natural frequency with constant amplitude and zero net external force acting on the system. 
+2. **Damped Oscillations**: Oscillations where the amplitude gradually decreases over time due to loss of energy caused by resistive forces such as drag/friction.
+3. **Forced Oscillations**: Oscillations driven by an external periodic force, causing the system to vibrate at the frequency of that driving force.
 
 # Simple Harmonic Motion (SHM)
 
@@ -50,7 +52,9 @@ From the value of $\omega$, we can find the time period of the oscillations as $
 
 ## Spring-Block System
 
-![Spring Block System](images/spring-block.svg){width=8cm #fig-spring-block-system}
+::: {.resp-fig}
+![Spring Block System](_images/spring-block.svg){width=8cm #fig-spring-block-system}
+:::
 
 - This is an example of linear SHM.
 
@@ -78,7 +82,9 @@ $$
 
 #### Series Combination
 
-![Series Combination](images/spring-series.svg){width=8cm #fig-spring-block-system}
+::: {.resp-fig}
+![Series Combination of Springs](_images/spring-series.svg){width=8cm #fig-spring-block-system}
+:::
 
 The total extension of the springs is equal to the sum of the extensions of the individual springs. i.e., $x = x_1 + x_2 + \dots$
 
@@ -98,7 +104,9 @@ Where $k_{\text{eff}}$ is the effective spring constant.
 
 #### Parallel Combination
 
-![Parallel Combination](images/spring-parallel.svg){width=8cm #fig-spring-block-system}
+::: {.resp-fig}
+![Parallel Combination of Springs](_images/spring-parallel.svg){width=8cm #fig-spring-block-system}
+:::
 
 The total restoring force is equal to the sum of the forces exerted by the individual springs. i.e., $F = F_1 + F_2 + \dots$
 
@@ -120,17 +128,119 @@ Learn more at: [LibreTexts Physics: The motion of a spring-mass system](https://
 
 ## Torsional Pendulum
 
+::: {.resp-fig}
+![Torsional Pendulum](_images/torsional-pendulum.svg){width=2.5cm #fig-torsional-pendulum}
+:::
+
 - This is an example of angular SHM.
 
-- The pendulum consists of a disc having some mass, suspended by a torsion wire (usually made of spring steel) from a rigid support.
+- The pendulum consists of a disc (or any other object) having some mass, suspended by a massless torsion wire (usually made of spring steel) from a rigid support.
 
 - Here, the restoring force is caused by the torsional strain on the pendulum rod when the disc is rotated from its mean position.
 
-$$ \tau \propto -\theta  \implies \tau = -k \theta $$
+$$ 
+\tau \propto -\theta  \implies \boxed{\tau = -C \theta} 
+$$ {#eq-torsion-torque}
 
-> The above equation is essentially a torsional equivalent to Hooke's law.
+::: {.callout-note}
+The above equation is essentially a torsional equivalent to Hooke's law.
+:::
+- $C$ is known as the torsional constant of the wire (couple per unit twist).
 
-- $k$ is known as the torsional constant of the wire.
+The net torque acting on the disc $\tau$ is equal to $I \alpha$ where $I$ is the moment of inertia of the disc and $\alpha$ is the angular acceleration of the disc. Thus, the above equation can be rewritten as:
 
+$$
+I \alpha = -C \theta \implies \alpha = - \frac{C}{I} \theta \text{ i.e. } \frac{d^2\theta}{dt^2} + \frac{C}{I} \theta = 0
+$$
 
+Comparing this with @eq-shm-de, we get:
 
+$$
+\boxed{\omega = \sqrt{\frac{C}{I}} \text{ and } T = 2\pi \sqrt{\frac{I}{C}}}
+$$
+
+# Damped Oscillations
+
+## Introduction
+
+- In an ideal world, a system would oscillate indefinitely at a constant frequency and amplitude, while interconverting conserved energy between kinetic and potential forms on each oscillation.
+
+- In reality, however, energy is lost due to dissipation, friction, and other factors. This results in a decrease in the amplitude of the oscillations over time.
+
+- We call this phenomenon of decreasing amplitude as **damping**.
+
+## Damping Coefficient
+
+- Generally, the force causing damping is proportional to the velocity of the system, and acts in the opposite direction of the velocity. i.e., $F_d \propto - v$
+
+- Thus, we introduce a proportionality constant $c$ called the damping coefficient, which gives us the equation:
+
+$$
+F_d = -r v \implies F_d = - c \frac{dx}{dt}
+$$
+
+## Equation of Damped Simple Harmonic Motion
+
+The net force on the system is equal to the sum of the restoring force and the damping force; i.e., $F = F_r + F_d$.
+
+Thus, we get:
+$$
+m \frac{d^2x}{dt^2} = - k x - c \frac{dx}{dt}
+$$
+
+We can rewrite this as a second-order differential equation:
+
+$$
+\ddot{x} + \frac{c}{m}\dot{x}  + \frac{k}{m}x = 0
+$$ {#eq-damped-de}
+
+::: {.callout-note}
+The above equation uses Newton's notation of derivatives, where the number of dots represents the order of the derivative. For example, $\ddot{x}$ represents $\frac{d^2x}{dt^2}$.
+:::
+
+### Solving the Differential Equation
+
+- We use the *characteristic equation method* to solve this second-order differential equation.
+
+The characteristic equation is found by considering $x = e^{\lambda t}$, and differentiating x according to the differential equation i.e., $\dot{x} = \lambda x$ and $\ddot{x} = \lambda^2 x$. (Where $\lambda$ is an arbitrary constant.)
+
+Putting the value of $\ddot{x}$ and $\dot{x}$ in @eq-damped-de, and dividing by $x$, we get the characteristic equation:
+
+$$
+\lambda^2 + \frac{c}{m}\lambda + \frac{k}{m} = 0
+$$
+
+For simplicity, we can take $2b = \frac{c}{m}$ and $\omega^2 = \frac{k}{m}$. Thus, we get:
+
+$$
+\lambda^2 + 2b\lambda + \omega^2 = 0
+$$
+
+This is a quadratic equation in $\lambda$, and can be solved using the quadratic formula:
+
+$$
+\lambda = \frac{-2b \pm \sqrt{4b^2 - 4\omega^2}}{2} = -b \pm \sqrt{b^2 - \omega^2}
+$$
+
+Since $\lambda$ has two solutions, we can write the general solution as:
+
+$$
+x(t) = A_1 e^{\lambda_1 t} + A_2 e^{\lambda_2 t} \\
+\Downarrow
+$$
+
+$$
+\boxed{x(t) = A_1 e^{(- b + \sqrt{b^2 - \omega^2}) t} + A_2 e^{(- b - \sqrt{b^2 - \omega^2}) t}}
+$$ {#eq-damped-soln}
+
+Where $A_1$ and $A_2$ are arbitrary constants.^[We introduce the constants $A_1$ and $A_2$ because of the Principle of Superposition. A second-order differential equation must have two independent solutions ($e^{\lambda _1t}$ and $e^{\lambda _2t}$). Combining them with these constants gives the total general solution. The exact values of $A_1$ and $A_2$ are physical scalers that will be locked into place later based on the system's initial conditions (its starting position and starting velocity at $t=0$)]
+
+## Scenarios of Damping
+
+![Scenarios of Damping](_images/damping-types.svg){width=12cm #fig-damping-types}
+
+### Overdamping ($b^2 > \omega^2$)
+
+### Critically Damped ($b^2 = \omega^2$)
+
+### Underdamped ($b^2 < \omega^2$)

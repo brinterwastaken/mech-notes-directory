@@ -1,6 +1,7 @@
 ---
 title: "PY211IB"
 subtitle: "Classical Physics for Engineers"
+number-sections: false
 ---
 
 ## Units
