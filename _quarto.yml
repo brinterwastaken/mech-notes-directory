@@ -13,9 +13,9 @@ website:
       - about.qmd
       - text: "Courses"
         menu:
-          - PY211IB/index.qmd
           - CI114TA/index.qmd
           - MA211TB/index.qmd
+          - PY211IB/index.qmd
     tools:
       - icon: github
         href: https://github.com/brinterwastaken/mech-notes-directory

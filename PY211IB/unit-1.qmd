@@ -186,7 +186,7 @@ $$
 
 The net force on the system is equal to the sum of the restoring force and the damping force; i.e., $F = F_r + F_d$.
 
-Thus, we get:
+Substituting $F_r$ from @eq-spring-force, we get:
 $$
 m \frac{d^2x}{dt^2} = - k x - c \frac{dx}{dt}
 $$
@@ -246,7 +246,7 @@ Where $A_1$ and $A_2$ are arbitrary constants.^[We introduce the constants $A_1$
 
 (also known as *Heavy Damping*)
 
-- The term $\sqrt{b^2 - w^2}$ is real, and smaller $b$. Thus, $\lambda _1$ as well as $\lambda _2$ are real and negative.
+- The term $\sqrt{b^2 - \omega^2}$ is real, and smaller $b$. Thus, $\lambda _1$ as well as $\lambda _2$ are real and negative.
 
 - The abscence of imaginary components restricts the solution to purely exponential decay, with no oscillatory component. 
 
@@ -258,9 +258,9 @@ Where $A_1$ and $A_2$ are arbitrary constants.^[We introduce the constants $A_1$
 
 ### Critical Damping ($b^2 = \omega^2$)
 
-- In this case, we use limit analysis to find the solution as $b^2 - w^2 \to 0$.
+- In this case, we use limit analysis to find the solution as $b^2 - \omega^2 \to 0$.
 
-Let us consider a small quantity $\beta = \sqrt{b^2 - w^2}$. Then, from @eq-damped-soln we have:
+Let us consider a small quantity $\beta = \sqrt{b^2 - \omega^2}$. Then, from @eq-damped-soln we have:
 
 $$
 x(t) = A_1 e^{(-b + \beta)t} + A_2 e^{(-b - \beta)t}
@@ -275,15 +275,18 @@ $$
 Since $\beta \to 0$, we can use the Maclaurin series expansion to write $e^{\beta t} \approx 1 + \beta t$ and $e^{-\beta t} \approx 1 - \beta t$. Thus, we get:
 
 $$
-x(t) = e^{-bt} (A_1 (1 + \beta t) + A_2 (1 - \beta t)) \\
-\Downarrow \\
-x(t) = e^{-bt} ((A_1 + A_2) + (A_1 - A_2)\beta t)
+\begin{aligned}
+x(t) & = e^{-bt} (A_1 (1 + \beta t) + A_2 (1 - \beta t)) \\
+& = e^{-bt} ((A_1 + A_2) + (A_1 - A_2)\beta t)
+\end{aligned}
 $$
 
 We can simplify the constants by taking $A_1 + A_2 = C_1$ and $(A_1 - A_2)\beta = C_2$. Thus, we get:
 
 $$
-x(t) = e^{-bt} (C_1 +  C_2 t)
+\boxed{
+  x(t) = e^{-bt} (C_1 +  C_2 t)
+}
 $$
 
 - Similar to the overdamped case, the solution is purely exponential decay, with no oscillatory component.
@@ -302,6 +305,48 @@ Critical damping sits at the *sweet spot* of damping of the system. Any less dam
 
 ### Underdamping ($b^2 < \omega^2$)
 
-::: {.callout-note}
-🚧 This section is under construction. 🚧 
-:::
+(also known as *Light/Low Damping*)
+
+- In this case, $\sqrt{b^2 - \omega^2}$ is imaginary, thus we take a real variable $\beta' = \sqrt{\omega^2 - b^2}$. Thus, $\sqrt{b^2 - \omega^2} = i\beta'$
+
+Substituting this in @eq-damped-soln, we get:
+
+$$
+\begin{aligned}
+x(t) & = A_1 e^{(- b + i\beta') t} + A_2 e^{(- b - i\beta') t}\\
+& = e^{-bt}(A_1 e^{i \beta' t} + A_2 e^{-i \beta' t})
+\end{aligned}
+$$
+
+We know that $e^{i\theta} = \cos{\theta} + i \sin{\theta}$ and $e^{-i\theta} = \cos{\theta} - i \sin{\theta}$. Substituting these in the above equation, we get:
+
+$$
+\begin{aligned}
+x(t) & = e^{-bt}(A_1 (\cos{\beta' t} + i \sin{\beta' t}) + A_2 (\cos{\beta' t} - i \sin{\beta' t})) \\
+& = e^{-bt}((A_1 + A_2)\cos{\beta' t} + i(A_1-A_2)\sin{\beta' t})
+\end{aligned}
+$$
+
+We can condense the expression by considering $(A_1 + A_2) = A\sin{\phi}$ and $i(A_1 - A_2) = A\cos{\phi}$, where $A$ and $\phi$ are constants. Thus, we get:
+
+$$
+x(t) = e^{-bt}(A\sin{\phi}\cos{\beta' t} + A\cos{\phi}\sin{\beta' t})
+$$
+
+Which simplifies to:
+
+$$
+\boxed{
+  x(t) = Ae^{-bt}(\sin{\beta't + \phi})
+}
+$$
+
+- Unlike overdamping and critical damping, the solution includes a sinusoidal component rather than purely exponential decay.
+
+- The system undergoes true oscillations, but with an amplitude that decreases exponentially over time due to the $e^{-bt}$ factor.
+
+- Thus, underdamping allows the system to pass through the equilibrium position multiple times before eventually coming to rest.
+
+- It is depicted with a solid line in @fig-damping-types.
+
+**Examples:** Child on a playground swing, Plucked instrument string.

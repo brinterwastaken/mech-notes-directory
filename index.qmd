@@ -7,9 +7,9 @@ number-sections: false
 A collection of notes for various courses under the Mechanical Engineering Stream.
 
 # Courses
-- [PY211IB: *Classical Physics for Engineers*](PY211IB/)
 - [CI114TA: *AI Foundations for Engineers*](CI114TA/)
 - [MA211TB: *Fundamentals of Linear Algebra, Calculus, and Differential Equations*](MA211TB/)
+- [PY211IB: *Classical Physics for Engineers*](PY211IB/)
 
 # Contributing
 
