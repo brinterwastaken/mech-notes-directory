@@ -197,7 +197,8 @@ $$
 \ddot{x} + \frac{c}{m}\dot{x}  + \frac{k}{m}x = 0
 $$ {#eq-damped-de}
 
-::: {.callout-note}
+::: {#nte-newtons-notation .callout-note}
+## Newton's Notation of Derivatives
 The above equation uses Newton's notation of derivatives, where the number of dots represents the order of the derivative. For example, $\ddot{x}$ represents $\frac{d^2x}{dt^2}$.
 :::
 
@@ -246,7 +247,7 @@ Where $A_1$ and $A_2$ are arbitrary constants.^[We introduce the constants $A_1$
 
 (also known as *Heavy Damping*)
 
-- The term $\sqrt{b^2 - \omega^2}$ is real, and smaller $b$. Thus, $\lambda _1$ as well as $\lambda _2$ are real and negative.
+- The term $\sqrt{b^2 - \omega^2}$ is real, and smaller than $b$. Thus, $\lambda _1$ as well as $\lambda _2$ are real and negative.
 
 - The abscence of imaginary components restricts the solution to purely exponential decay, with no oscillatory component. 
 
@@ -285,7 +286,7 @@ We can simplify the constants by taking $A_1 + A_2 = C_1$ and $(A_1 - A_2)\beta 
 
 $$
 \boxed{
-  x(t) = e^{-bt} (C_1 +  C_2 t)
+  x(t) = e^{-\frac{c}{2m}t} (C_1 +  C_2 t)
 }
 $$
 
@@ -327,7 +328,7 @@ x(t) & = e^{-bt}(A_1 (\cos{\beta' t} + i \sin{\beta' t}) + A_2 (\cos{\beta' t} -
 \end{aligned}
 $$
 
-We can condense the expression by considering $(A_1 + A_2) = A\sin{\phi}$ and $i(A_1 - A_2) = A\cos{\phi}$, where $A$ and $\phi$ are constants. Thus, we get:
+We can condense the expression by considering $(A_1 + A_2) = A\sin{\phi}$ and $i(A_1 - A_2) = A\cos{\phi}$, where $A$ and $\phi$ are constants^[Here, for $x$ to have a real valued solution, $A_1$ and $A_2$ must be complex conjugates. Thus, $(A_1 + A_2)$ and $i(A_1 - A_2)$ must be real, making $A\sin{\phi}$ and $A\cos{\phi}$ real as well.]. Thus, we get:
 
 $$
 x(t) = e^{-bt}(A\sin{\phi}\cos{\beta' t} + A\cos{\phi}\sin{\beta' t})
@@ -337,7 +338,7 @@ Which simplifies to:
 
 $$
 \boxed{
-  x(t) = Ae^{-bt}(\sin{\beta't + \phi})
+  x(t) = Ae^{-\frac{c}{2m}t}\sin(\beta't + \phi)
 }
 $$
 
@@ -350,3 +351,97 @@ $$
 - It is depicted with a solid line in @fig-damping-types.
 
 **Examples:** Child on a playground swing, Plucked instrument string.
+
+# Forced Oscillations
+
+## Introduction
+
+- Forced oscillations occur when a system is subjected to an external periodic driving force, causing it to vibrate at the frequency of that applied force rather than its own natural frequency.
+
+- This external force can be denoted by $F_{\text{ext}}(t) = F_0 \sin(\omega' t)$, where $\omega'$ is the angular frequency of the external force.
+
+## Equation of Forced Simple Harmonic Motion
+
+- We consider the oscillations to be occuring in a damped medium. (damping coefficient $c$)
+
+The net force on the system is equal to the sum of the restoring force, damping force, and the external force; i.e., $F = F_r + F_d + F_{\text{ext}}$.
+
+Substituting the appropriate expressions for the forces, we get:
+
+$$
+m \ddot{x} = -k x -c \dot{x} + F_0 \sin(\omega' t)\\
+\Downarrow 
+$$
+$$
+\ddot{x} + \frac{c}{m}\dot{x}  + \frac{k}{m}x = \frac{F_0}{m} \sin(\omega' t)
+$$ {#eq-forced-de}
+
+*Derivatives denoted in Newton's Notation (@nte-newtons-notation)*
+
+### Solving the Differential Equation
+
+- Since the displacement lags behind the driving force due to inertia and damping, we can assume the steady-state solution to be of the form $x(t) = A\sin(\omega' t - \phi)$. Thus we get: $\dot{x} = A \omega'\cos(\omega' t - \phi)$ and $\ddot{x} =- A \omega'^2\sin(\omega' t - \phi)$.
+
+Substituting these in @eq-forced-de, and simplifying the constants, $\frac{c}{m} = 2b \text{, } \frac{k}{m} = \omega^2 \text{, and } \frac{F_0}{m} = f_0$, we get:
+
+$$
+- A \omega'^2\sin(\omega' t - \phi) +2b A \omega'\cos(\omega' t - \phi) + \omega^2 A\sin(\omega' t - \phi) = f_0 \sin(\omega' t) \\
+\Downarrow \\
+A (\omega^2 - \omega'^2)\sin(\omega' t - \phi) +2b A \omega'\cos(\omega' t - \phi) = f_0 \sin(\omega' t)
+$$
+
+To match the coefficients on both sides, we can rewrite the right-hand side using the trigonometric identity $\sin(\omega' t) = \sin([\omega' t - \phi] + \phi)$. Expanding this gives:
+
+$$
+A (\omega^2 - \omega'^2)\sin(\omega' t - \phi) +2b A \omega'\cos(\omega' t - \phi) = f_0(\sin[\omega't-\phi]\cos\phi + \cos[\omega't-\phi]\sin\phi)
+$$
+
+For this equation to have a solution for all values of $t$, the coefficients of $\sin(\omega't - \phi)$ and $\cos(\omega't - \phi)$ must be equal on both sides. Thus, we get:
+
+$$
+A (\omega^2 - \omega'^2) = f_0\cos\phi \\
+2b A \omega' = f_0\sin\phi
+$$
+
+Squaring and adding these, we get:
+$$
+A^2 (\omega^2 - \omega'^2) ^2 + 4b^2 A^2 \omega' ^2 = f_0^2 (\sin^2\phi + \cos^2 \phi) = f_0^2
+$$
+
+Simplifying for A, we get:
+
+$$
+\boxed{A = \frac{f_0}{\sqrt{(\omega^2 - \omega'^2) ^2 + 4b^2 \omega' ^2}}}
+$$ {#eq-amplitude-forced}
+
+Similarly, we can find the phase angle ($\phi$) by dividing the second equation by the first, i.e.:
+
+$$
+\begin{aligned}
+\frac{2b A \omega'}{A (\omega^2 - \omega'^2)} & = \frac{f_0\sin\phi}{f_0\cos\phi} \\
+\frac{2b\omega'}{\omega^2 - \omega'^2} & = \tan\phi
+\end{aligned}
+$$
+
+Thus, we get the expression for phase lag ($\phi$) as:
+$$
+\boxed{
+  \phi = \tan^{-1}\left(\frac{2b\omega'}{\omega^2 - \omega'^2} \right)
+}
+$$ {#eq-phase-forced}
+
+The final solution can be written as:
+
+$$
+\boxed{
+  x(t) = A\sin(\omega't - \phi)
+}
+$$
+
+With amplitude as in @eq-amplitude-forced, and phase lag as in @eq-phase-forced.
+
+
+
+::: {.callout-note}
+The sign for $\phi$ is taken negative, as it has been taken positive in the expression for the external force, and we initially assumed $x(t)$ to not have an initial phase.
+:::
