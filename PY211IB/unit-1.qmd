@@ -440,8 +440,3 @@ $$
 
 With amplitude as in @eq-amplitude-forced, and phase lag as in @eq-phase-forced.
 
-
-
-::: {.callout-note}
-The sign for $\phi$ is taken negative, as it has been taken positive in the expression for the external force, and we initially assumed $x(t)$ to not have an initial phase.
-:::
