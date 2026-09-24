@@ -440,3 +440,46 @@ $$
 
 With amplitude as in @eq-amplitude-forced, and phase lag as in @eq-phase-forced.
 
+## Cases of Forced Oscillations
+
+### Low-Frequency Driving ($\omega' \ll \omega$)
+When the driving force oscillates very slowly compared to the natural frequency of the system, inertia plays almost no role.
+
+- Because the force changes so slowly, the system is always in a state of near-equilibrium. The spring simply stretches and compresses to match the applied force at any given moment.
+
+- *Mathematical Approximation:* The equation for the amplitude (@eq-amplitude-forced) simplifies because $\omega^2 - \omega'^2 \approx \omega^2$.
+$$A = \frac{f_0}{\sqrt{(\omega^2 - \omega'^2)^2 + (2b\omega')^2}} \approx \frac{F_0/m}{\omega^2} = \frac{F_0}{k}$$ 
+
+- Visualizing the Motion: If you slowly pull and push a weight on a spring up and down, the weight moves up when you pull up, and moves down when you push down.
+
+### High-Frequency Driving ($\omega' \gg \omega$)
+When the driving force oscillates incredibly fast, the inertia (mass) of the system prevents it from keeping up.
+
+- The force reverses direction so rapidly that the mass cannot accelerate fast enough to achieve large displacements. The spring's restoring force becomes negligible compared to the rapid acceleration required by the driving force.
+
+- *Mathematical Approximation:* The equation for the amplitude simplifies because $\omega'^2$ dominates, making $\omega^2  - \omega'^2 \approx - \omega'^2$, and $\omega'^4 \gg 4b^2 \omega'^2$. Substituting in @eq-amplitude-forced, we get:
+$$
+A \approx \frac{F_0/m}{\omega'^2} = \frac{F_0}{m\omega'^2}
+$$
+
+As $\omega' \to \inf$, the amplitude $A \to 0$.
+
+## Resonance
+
+- The phenommenon in which an oscillating system reaches maximum amplitude, due to the driving force's frequency being equal to the natural frequency of the system.
+
+i.e. $\omega' = \omega$ Thus, from @eq-amplitude-forced, we get:
+
+$$
+A = \frac{f_0}{\sqrt{(\omega^2 - \omega'^2) ^2 + 4b^2 \omega' ^2}} = \frac{f_0}{\sqrt{4b^2 \omega' ^2}} = \frac{F_0/m}{2b\omega'} \\
+\Downarrow \\
+A_{max} = \frac{F_0}{2bm\omega'}
+$$
+
+This phenomenon is depicted in the below graph, showing the variation of amplitude as a function of driving frequency.
+
+![Amplitude - Driving Frequency Graph (Resonance)](_images/resonance-graph.svg){width=14cm #fig-resonance-graph}
+
+### Sharpness of Resonance
+
+(W.I.P.)

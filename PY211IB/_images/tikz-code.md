@@ -211,3 +211,54 @@
 
 \end{document}
 ```
+
+# resonance-graph.svg
+
+```latex
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1.8]
+  
+  % Axes
+  \draw[line width=1.5pt] (0,0) -- (0,5);
+  \draw[line width=1.5pt] (0,0) -- (6,0);
+  
+  % Axis labels
+  \node at (-0.3,5.2) {Amplitude $(A)$};
+  \node at (6.2,-0.2) {Driving Frequency $(\omega')$};
+  
+  % Resonance vertical dotted line at ω₀
+  \draw[line width=1pt, dotted] (3,0) -- (3,5);
+  
+  % Resonance frequency label
+  \node at (3,-0.2) {$\omega_0$};
+  
+  % Clipping region to limit no damping curve
+  \begin{scope}
+    \clip (0,0) rectangle (6,5);
+    % No Damping (solid line) - sharp peak, clipped
+    \draw[line width=1.3pt, solid] plot[smooth, domain=0.3:5.7, samples=150] (\x, {1/(abs(1-(\x/3)^2)+0.01)});
+  \end{scope}
+  
+  % Light Damping (dashed line) - moderate peak
+  \draw[line width=1.3pt, dashed] plot[smooth, domain=0.3:5.7, samples=150] (\x, {1/sqrt((1-(\x/3)^2)^2+(0.3*\x/3)^2)});
+  
+  % Heavy Damping (dash-dot line) - broad, low peak
+  \draw[line width=1.3pt, dash pattern=on 5pt off 2pt on 1pt off 2pt] plot[smooth, domain=0.3:5.7, samples=150] (\x, {1/sqrt((1-(\x/3)^2)^2+(0.8*\x/3)^2)});
+  
+  % Legend
+  \draw[line width=1.3pt, solid] (4.2,4.5) -- (4.65,4.5);
+  \node[right] at (4.7,4.5) {No Damping};
+  
+  \draw[line width=1.3pt, dashed] (4.2,4.2) -- (4.65,4.2);
+  \node[right] at (4.7,4.2) {Light Damping};
+  
+  \draw[line width=1.3pt, dash pattern=on 5pt off 2pt on 1pt off 2pt] (4.2,3.9) -- (4.65,3.9);
+  \node[right] at (4.7,3.9) {Heavy Damping};
+  
+\end{tikzpicture}
+
+\end{document}
+```
