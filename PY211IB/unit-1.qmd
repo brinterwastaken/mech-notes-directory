@@ -482,4 +482,16 @@ This phenomenon is depicted in the below graph, showing the variation of amplitu
 
 ### Sharpness of Resonance
 
-(W.I.P.)
+- It is a measure of how sharp the amplitude peak is, i.e., how quickly the amplitude decreases on either side of the resonant frequency.
+
+- A sharper resonance peak implies that the system is more selective, and responsive only to a small set of driving frequencies, while a smoother peak implies that the system is responsive to a larger set of frequencies.
+
+It is measured as the ratio of the resonant frequency to the bandwidth at half of the maximum power, i.e. at $\frac{1}{\sqrt{2}}$ of the maximum amplitude.
+
+If $\omega_1$ and $\omega_2$ are the frequencies of the two points where the amplitude is $\frac{1}{\sqrt{2}}$ of the maximum, then the sharpness of the resonance is given by:
+
+$$
+Q = \frac{\omega_r}{|\omega_2 - \omega_1|} = \frac{\omega_r}{b}
+$$
+
+(where $b$ is the bandwidth, i.e. the difference between the two frequencies at half power)
