@@ -1,5 +1,5 @@
 ---
-title: "Elementary Linear Algebra"
+title: "Unit I - Elementary Linear Algebra"
 subtitle: "<a href='javascript:void(0)' onclick='window.print()' class='btn btn-outline-primary btn-sm' role='button'>Download/Print</a>"
 format: html
 ---

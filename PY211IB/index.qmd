@@ -6,3 +6,4 @@ number-sections: false
 
 ## Units
 1. [Oscillations](unit-1.qmd)
+1. [Elasticity](unit-2.qmd)

@@ -262,3 +262,42 @@
 
 \end{document}
 ```
+
+# stress-strain.svg
+
+```latex
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1.5]
+  
+  % Axes
+  \draw[line width=1.5pt] (0,0) -- (0,4.33);
+  \draw[line width=1.5pt] (0,0) -- (6,0);
+  \node at (-0.47,4.24) {Stress};
+  \node at (5.8,-0.25) {Strain};
+  \draw[line width=2pt] (0,0) -- (1.2,2.5);
+  \draw[line width=2pt, loosely dotted] (0.42,0) -- (1.82,2.84);
+  \draw[fill=black] (3.67,3.67) circle (0.05cm);
+  \draw[line width=2pt] (1.20,2.50) .. controls (1.45,3) and (1.71,3.01) .. (1.85,2.90);
+  \draw[line width=2pt] (1.85,2.9) .. controls (2.13,2.67) and (2.58,3.67) .. (3.67,3.67);
+  \draw[fill=black] (1.39,2.79) circle (0.05cm);
+  \draw[line width=2pt] (3.67,3.67) .. controls (4.26,3.67) and (4.85,3.62) .. (5.8,3.11);
+  \node[node font=\footnotesize] (node1) at (0.92,3.26) {Yield Strength};
+  \node[node font=\footnotesize] at (3.11,4.16) {Ultimate Strength};
+  \node[node font=\footnotesize] at (5.66,3.79) {Fracture};
+  \node[node font=\Large\sffamily, rotate=-13, minimum width=15pt] (node3) at (5.8,3.12) {X};
+  \draw[line width=1pt, |-|] (0,4.71) -- (1.34,4.72);
+  \node at (0.68,4.92) {Elastic};
+  \draw[line width=1pt, |-|] (1.34,4.72) -- (3.67,4.73);
+  \node[minimum width=87pt] at (2.55,4.9) {Strain Hardening};
+  \draw[line width=1pt, |-|] (3.67,4.73) -- (5.8,4.72);
+  \node at (4.75,4.9) {Necking};
+  \draw (1.15,3.11) -- (1.29,2.91);
+  \draw (3.57,3.79) -- (3.33,4);
+  \draw (5.74,3.33) -- (5.67,3.62);
+\end{tikzpicture}
+
+\end{document}
+```

@@ -1,0 +1,75 @@
+---
+title: "Unit II - Elasticity"
+subtitle: "<a href='javascript:void(0)' onclick='window.print()' class='btn btn-outline-primary btn-sm' role='button'>Download/Print</a>"
+format: html
+---
+
+# Introduction
+
+The behavior of materials can be classified into three broad categories, based on their reaction to the application of external forces:
+
+```{mermaid}
+flowchart TB
+    M["<b>Material Behavior</b>"]
+    R["<b>Rigid</b><br/>Does not deform under action of external forces"]
+    E["<b>Elastic</b><br/>Deforms due to the force, but returns to original shape on removal"]
+    P["<b>Plastic</b><br/>Deforms irreversibly on applying the external force"]
+
+    M --> R
+    M --> E
+    M --> P
+```
+
+- Practically, perfectly rigid materials are not possible, and materials exhibit *elasto-plastic* behavior, i.e. they are elastic for smaller forces, but exhibit plastic behavior once the force exceeds a certain threshold.
+
+- **Deforming Force**: The external force applied on the body causing it to deform.
+
+- **Restoring Force**: The reaction force developed in the body due to its deformation.
+
+# Stress and Strain
+
+**Stress**: The restoring force per unit area generated inside a material.
+
+- Types:
+  - Normal stress
+  - Tangential stress
+  - Volume stress
+
+**Strain**: The fractional change in dimension of a material due to the application of deforming force.
+
+i.e.
+
+- Types:
+  - Linear strain
+  - Shearing strain
+  - Volume strain
+
+## Hooke's Law
+
+- Hooke's Law states that, within the material's elastic limit, the deformation in the body is directly proportional to the deforming force applied on it.
+
+- This implies that $\text{stress} \propto \text{strain}$.
+
+Here, the constant of proportionality depends on the type of stress and strain the body is subjected to:
+
+| Type of Stress & Strain | Proportionality Constant | Expression |
+|:----:|:----:|:----:|
+| Normal Stress & Linear Strain | Young's Modulus ($Y$) | $$\frac{F}{A} = Y \frac{\Delta l}{l}$$ |
+| Tangential Stress & Shearing Strain | Shear Modulus ($\eta$) | $$\frac{F}{A} = \eta \theta$$ |
+| Volume Stress & Volume Strain | Bulk Modulus ($K$) | $$\frac{F}{A} = K\frac{\Delta V} {V}$$ |
+
+## Stress-Strain Curve
+
+![Stress-Strain Curve of a Material](_images/stress-strain.svg){width=14cm #fig-stress-strain}
+
+(Description W.I.P.)
+
+## Deviation from Hooke's Law
+
+Once a material exceeds its elastic limit, it transitions from elastic deformation to other behaviors as described below:
+
+- **Strain Hardening**: Once a metal is stressed past its elastic limit, it enters the plastic region, retaining permanent deformation upon unloading. Further increasing the load triggers strain hardening, [making the material stronger and more resistant to subsequent deformation as strain increases]{.underline}. While this process enhances the material's yield strength, it reduces its ductility. This mechanism occurs exclusively within the region between the yield point and the ultimate tensile strength.
+
+- **Strain Softening**: It is typically observed after the material reaches its yield point, characterized by a [decrease in stress as strain continues to increase]{.underline}. This behavior is primarily driven by the material's inherent brittleness and microstructural heterogeneity.
+
+- **Elastic Fatigue**: A body subjected to repeated strains beyond its elastic limit, has its [elastic properties greatly impaired]{.underline}, and may break under a stress less than its normal breaking stress even within its elastic limit. This is called elastic fatigue. 
