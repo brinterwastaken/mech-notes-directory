@@ -72,7 +72,7 @@ $$ {#eq-spring-force}
 The above equation can be rewritten as:
 
 $$
-ma = kx \implies \frac{d^2x}{dt^2} + \frac{k}{m}x = 0
+ma = -kx \implies \frac{d^2x}{dt^2} + \frac{k}{m}x = 0
 $$
 
 Comparing this with @eq-shm-de, we get:
@@ -462,7 +462,7 @@ $$
 A \approx \frac{F_0/m}{\omega'^2} = \frac{F_0}{m\omega'^2}
 $$
 
-As $\omega' \to \inf$, the amplitude $A \to 0$.
+As $\omega' \to \infty$, the amplitude $A \to 0$.
 
 ## Resonance
 
@@ -491,7 +491,7 @@ It is measured as the ratio of the resonant frequency to the bandwidth at half o
 If $\omega_1$ and $\omega_2$ are the frequencies of the two points where the amplitude is $\frac{1}{\sqrt{2}}$ of the maximum, then the sharpness of the resonance is given by:
 
 $$
-Q = \frac{\omega_r}{|\omega_2 - \omega_1|} = \frac{\omega_r}{b}
+Q = \frac{\omega_r}{|\omega_2 - \omega_1|} = \frac{\omega_r}{\Delta \omega}
 $$
 
-(where $b$ is the bandwidth, i.e. the difference between the two frequencies at half power)
+(where $\Delta \omega$ is the bandwidth, i.e. the difference between the two frequencies at half power)
