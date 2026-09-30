@@ -385,15 +385,15 @@ $$ {#eq-forced-de}
 Substituting these in @eq-forced-de, and simplifying the constants, $\frac{c}{m} = 2b \text{, } \frac{k}{m} = \omega^2 \text{, and } \frac{F_0}{m} = f_0$, we get:
 
 $$
-- A \omega'^2\sin(\omega' t - \phi) +2b A \omega'\cos(\omega' t - \phi) + \omega^2 A\sin(\omega' t - \phi) = f_0 \sin(\omega' t) \\
+\begin{array}{ll} - \,  A \omega'^2\sin(\omega' t - \phi) \\ \hspace{0.75cm} + \, 2b A \omega'\cos(\omega' t - \phi) \\ \hspace{1.5cm} + \, \omega^2 A\sin(\omega' t - \phi) \end{array} = f_0 \sin(\omega' t) \\
 \Downarrow \\
-A (\omega^2 - \omega'^2)\sin(\omega' t - \phi) +2b A \omega'\cos(\omega' t - \phi) = f_0 \sin(\omega' t)
+\begin{array}{ll} A (\omega^2 - \omega'^2)\sin(\omega' t - \phi) \\ \hspace{1cm} + \, 2b A \omega'\cos(\omega' t - \phi) \end{array} = f_0 \sin(\omega' t)
 $$
 
-To match the coefficients on both sides, we can rewrite the right-hand side using the trigonometric identity $\sin(\omega' t) = \sin([\omega' t - \phi] + \phi)$. Expanding this gives:
+To match the coefficients on both sides, we can rewrite the right-hand side by substituting $\sin(\omega' t) = \sin[(\omega' t - \phi) + \phi]$. Expanding this gives:
 
 $$
-A (\omega^2 - \omega'^2)\sin(\omega' t - \phi) +2b A \omega'\cos(\omega' t - \phi) = f_0(\sin[\omega't-\phi]\cos\phi + \cos[\omega't-\phi]\sin\phi)
+A (\omega^2 - \omega'^2)\sin(\omega' t - \phi) +2b A \omega'\cos(\omega' t - \phi) \hspace{1.5cm} \\ \hspace{1.5cm} = f_0[\sin(\omega't-\phi)\cos\phi + \cos(\omega't-\phi)\sin\phi]
 $$
 
 For this equation to have a solution for all values of $t$, the coefficients of $\sin(\omega't - \phi)$ and $\cos(\omega't - \phi)$ must be equal on both sides. Thus, we get:
